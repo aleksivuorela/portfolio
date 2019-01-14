@@ -15,27 +15,25 @@ import SchoolIcon from '@material-ui/icons/School';
 import MailIcon from '@material-ui/icons/Mail';
 import DescriptionIcon from '@material-ui/icons/Description';
 import { withStyles } from '@material-ui/core/styles';
-
-const drawerWidth = 240;
+import constants from '../common/constants'
 
 const styles = theme => ({
   root: {
     display: 'flex',
   },
   logo: {
-    background: '#fafafa',
     padding: '30px'
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
+      width: constants.drawerWidth,
       flexShrink: 0,
     },
   },
   appBar: {
-    marginLeft: drawerWidth,
+    marginLeft: constants.drawerWidth,
     [theme.breakpoints.up('sm')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
+      width: `calc(100% - ${constants.drawerWidth}px)`,
     },
   },
   menuButton: {
@@ -46,7 +44,7 @@ const styles = theme => ({
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
-    width: drawerWidth,
+    width: constants.drawerWidth,
   },
   content: {
     flexGrow: 1,
