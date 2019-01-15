@@ -23,13 +23,21 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
       resolve: `@wapps/gatsby-plugin-material-ui`,
       options: {
-        // Add any options here
+        theme: {
+          palette: {
+            primary: {
+              light: '#33998f',
+              main: '#008073',
+              dark: '#005950'
+            }
+          }
+        }
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
