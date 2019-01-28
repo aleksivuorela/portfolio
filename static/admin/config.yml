@@ -1,16 +1,30 @@
-# backend:
-#   name: test-repo
+backend:
+  name: github
+  repo: aleksivuorela/portfolio
 
-# media_folder: static/assets
-# public_folder: assets
+media_folder: static/img
+public_folder: img
 
-# collections:
-#   - name: blog
-#     label: Blog
-#     folder: blog
-#     create: true
-#     fields:
-#       - { name: path, label: Path }
-#       - { name: date, label: Date, widget: date }
-#       - { name: title, label: Title }
-#       - { name: body, label: Body, widget: markdown }
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Image", name: "image", widget: "image"}
+      - file: "src/pages/experience/index.md"
+        label: "Experience"
+        name: "experience"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "experience-page"}
+          - label: Jobs
+            name: jobs
+            widget: list
+            fields:
+              - {label: Employer, name: employer, widget: string}
+              - {label: Description, name: description, widget: markdown}
