@@ -13,7 +13,7 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Key", name: "key", widget: "hidden", default: "about"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Image", name: "image", widget: "image"}
@@ -21,7 +21,7 @@ collections:
         label: "Experience"
         name: "experience"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "experience-page"}
+          - {label: "Key", name: "key", widget: "hidden", default: "experience"}
           - label: Jobs
             name: jobs
             widget: list

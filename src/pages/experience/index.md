@@ -1,3 +1,4 @@
 ---
-templateKey: 'experience-page'
+key: experience
+title: Experience
 ---

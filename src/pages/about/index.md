@@ -1,5 +1,5 @@
 ---
-templateKey: about-page
+key: about
 title: Aleksi Vuorela
 image: /img/favicon.png
 ---
