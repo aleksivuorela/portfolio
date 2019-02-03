@@ -52,6 +52,9 @@ module.exports = {
               main: `#008073`,
               dark: `#005950`
             }
+          },
+          typography: {
+            fontSize: 16,
           }
         }
       },
