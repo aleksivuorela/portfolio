@@ -1,23 +1,23 @@
 import React from 'react'
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Divider from '@material-ui/core/Divider';
-import Drawer from '@material-ui/core/Drawer';
-import Hidden from '@material-ui/core/Hidden';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import PersonIcon from '@material-ui/icons/Person';
-import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-import WebIcon from '@material-ui/icons/Web';
-import EqualizerIcon from '@material-ui/icons/Equalizer';
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Divider from '@material-ui/core/Divider'
+import Drawer from '@material-ui/core/Drawer'
+import Hidden from '@material-ui/core/Hidden'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemText from '@material-ui/core/ListItemText'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+import PersonIcon from '@material-ui/icons/Person'
+import TrendingUpIcon from '@material-ui/icons/TrendingUp'
+import WebIcon from '@material-ui/icons/Web'
+import EqualizerIcon from '@material-ui/icons/Equalizer'
 import SchoolIcon from '@material-ui/icons/School';
-import MailIcon from '@material-ui/icons/Mail';
-import DescriptionIcon from '@material-ui/icons/Description';
-import { withStyles } from '@material-ui/core/styles';
+import MailIcon from '@material-ui/icons/Mail'
+import DescriptionIcon from '@material-ui/icons/Description'
+import { withStyles } from '@material-ui/core/styles'
 import constants from '../common/constants'
 
 const styles = theme => ({
@@ -117,7 +117,7 @@ class Nav extends React.Component {
     return (
       <>
         <Hidden smUp implementation="css">
-          <AppBar position="fixed" className={classes.appBar} color="inherit">
+          <AppBar position="fixed" color="inherit">
             <Toolbar className={classes.toolbar}>
               <IconButton
                 color="inherit"
