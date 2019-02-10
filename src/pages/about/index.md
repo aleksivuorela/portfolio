@@ -1,6 +1,6 @@
 ---
 key: about
 title: Aleksi Vuorela
-image: /img/favicon.png
+image: /img/photo-1543246621-069371c3b075.jpg
 ---
-Test
+Full Stack Developer
