@@ -1,4 +1,4 @@
 export default {
-  drawerWidth: 240,
+  drawerWidth: 220,
   appBarHeight: 56
 }

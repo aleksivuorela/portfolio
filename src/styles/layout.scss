@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 html {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   -ms-text-size-adjust: 100%;
@@ -12,4 +14,53 @@ body {
 h1, h2, h3, h4, h5, h6, p {
   padding: 0;
   margin: 0 0 0.35em 0;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.intro {
+  display: flex;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.intro-content {
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: #fff;
+    margin-bottom: 0.2em;
+  }
+
+  p {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    margin-top: -$app-bar-height;
+
+    h1 {
+      font-size: 4.2rem;
+    }
+  }
 }

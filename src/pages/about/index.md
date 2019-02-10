@@ -1,6 +1,5 @@
 ---
 key: about
-title: Aleksi Vuorela
-image: /img/photo-1543246621-069371c3b075.jpg
+title: About
 ---
-Full Stack Developer
+A 24-year-old dude. Passionate about learning the latest technologies and writing elegant code.

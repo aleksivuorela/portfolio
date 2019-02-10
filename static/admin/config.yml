@@ -9,6 +9,14 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/intro/index.md"
+        label: "Intro"
+        name: "intro"
+        fields:
+          - {label: "Key", name: "key", widget: "hidden", default: "intro"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
@@ -16,7 +24,6 @@ collections:
           - {label: "Key", name: "key", widget: "hidden", default: "about"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Image", name: "image", widget: "image"}
       - file: "src/pages/experience/index.md"
         label: "Experience"
         name: "experience"

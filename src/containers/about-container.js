@@ -10,8 +10,7 @@ const AboutContainer = () => {
           markdownRemark(frontmatter: {key: {eq: "about"}}) {
             html
             frontmatter {
-              title,
-              image
+              title
             }
           }
         } 
@@ -21,7 +20,6 @@ const AboutContainer = () => {
         return (
           <About
             title={markdownRemark.frontmatter.title}
-            image={markdownRemark.frontmatter.image}
             content={markdownRemark.html}
           />
         );
