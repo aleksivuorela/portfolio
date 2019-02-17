@@ -6,8 +6,8 @@ const About = ({ title, content, contentComponent }) => {
 
   return (
     <section id="about" className="section scrollspy">
-      <h2>{title}</h2>
-      <Content className="about-content" content={content} />
+      <h2 className="section-title">{title}</h2>
+      <Content className="section-content" content={content} />
     </section>
   );
 }

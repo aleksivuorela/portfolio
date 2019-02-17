@@ -73,13 +73,13 @@ const styles = theme => ({
 });
 
 const menuItems = [
-  { title: 'About', icon: <PersonIcon /> },
-  { title: 'Experience', icon: <TrendingUpIcon /> },
-  { title: 'Projects', icon: <WebIcon /> },
-  { title: 'Skills', icon: <EqualizerIcon /> },
-  { title: 'Education', icon: <SchoolIcon /> },
-  { title: 'Contact', icon: <MailIcon /> },
-  { title: 'Resume', icon: <DescriptionIcon /> }
+  { title: 'About', href: '#about', icon: <PersonIcon /> },
+  { title: 'Experience', href: '#experience', icon: <TrendingUpIcon /> },
+  { title: 'Projects', href: '#projects', icon: <WebIcon /> },
+  { title: 'Skills', href: '#skills', icon: <EqualizerIcon /> },
+  { title: 'Education', href: '#education', icon: <SchoolIcon /> },
+  { title: 'Contact', href: '#contract', icon: <MailIcon /> },
+  { title: 'Resume', href: '#', icon: <DescriptionIcon /> }
 ];
 
 class Nav extends React.Component {
@@ -105,10 +105,12 @@ class Nav extends React.Component {
         </Hidden>
         <List>
           {menuItems.map(item => (
-            <ListItem button key={item.title}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.title} />
-            </ListItem>
+            <a href={item.href}>
+              <ListItem button key={item.title}>
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.title} />
+              </ListItem>
+            </a>
           ))}
         </List>
       </>

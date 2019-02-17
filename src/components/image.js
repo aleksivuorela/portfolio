@@ -27,8 +27,8 @@ Image.propTypes = {
     alt: PropTypes.string,
     childImageSharp: PropTypes.object,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
-    style: PropTypes.object,
   }).isRequired,
+  style: PropTypes.object,
 }
 
 export default Image

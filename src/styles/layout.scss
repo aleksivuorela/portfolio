@@ -16,6 +16,13 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0 0 0.35em 0;
 }
 
+a {
+  text-decoration: none;
+  outline: 0;
+  background-color: transparent;
+  color: inherit;
+}
+
 .full-height {
   height: 100vh;
 }
@@ -63,5 +70,23 @@ h1, h2, h3, h4, h5, h6, p {
     h1 {
       font-size: 4.2rem;
     }
+  }
+}
+
+.section {
+  position: relative;
+  padding-bottom: 30px;
+
+  .section-title {
+    color: #fff;
+    font-size: 2.9rem;
+    background-color: $teal;
+    text-transform: uppercase;
+    padding: 30px 40px;
+    margin-bottom: 60px;
+  }
+
+  .section-content {
+    padding: 0 40px;
   }
 }

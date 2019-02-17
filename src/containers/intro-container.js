@@ -10,11 +10,12 @@ const IntroContainer = () => {
           markdownRemark(frontmatter: {key: {eq: "intro"}}) {
             frontmatter {
               title,
+              subtitle,
               bgimage {
                 alt
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 2048, quality: 100) {
+                    fluid(maxWidth: 1920) {
                       ...GatsbyImageSharpFluid
                     }
                   }
