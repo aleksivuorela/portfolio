@@ -12,7 +12,20 @@ const ExperienceContainer = () => {
               title
               jobs {
                 employer
+                position
+                start_date
+                end_date
                 description
+                logo {
+                  alt
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 200) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
               }
             }
           }
