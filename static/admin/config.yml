@@ -32,8 +32,8 @@ collections:
           - {label: "Jobs", name: "jobs", widget: "list", fields: [
               {label: Employer, name: employer, widget: string},
               {label: Position, name: position, widget: string},
-              {label: Start date, name: start-date, widget: date},
-              {label: End date, name: end-date, widget: date},
+              {label: Start date, name: start_date, widget: date},
+              {label: End date, name: end_date, widget: date},
               {label: Description, name: description, widget: markdown},
               {label: "Logo", name: "logo", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},

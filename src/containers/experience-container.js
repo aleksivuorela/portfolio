@@ -8,9 +8,25 @@ const ExperienceContainer = () => {
       query={graphql`
         query {
           markdownRemark(frontmatter: {key: {eq: "experience"}}) {
-            html
             frontmatter {
               title
+              jobs {
+                employer
+                position
+                start_date
+                end_date
+                description
+                logo {
+                  alt
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 200) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         } 
@@ -20,7 +36,7 @@ const ExperienceContainer = () => {
         return (
           <Experience
             title={markdownRemark.frontmatter.title}
-            content={markdownRemark.html}
+            jobs={markdownRemark.frontmatter.jobs}
           />
         );
       }}

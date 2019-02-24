@@ -1,12 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import showdown from 'showdown'
+
+const converter = new showdown.Converter()
+
+export const Content = ({ content, className }) => (
+  <div className={className}>{content}</div>
+)
 
 export const HTMLContent = ({ content, className }) => (
   <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
 )
 
-const Content = ({ content, className }) => (
-  <div className={className}>{content}</div>
+export const MarkdownContent = ({ content, className }) => (
+  <div className={className} dangerouslySetInnerHTML={{ __html: converter.makeHtml(content) }} />
 )
 
 Content.propTypes = {
@@ -15,5 +22,4 @@ Content.propTypes = {
 }
 
 HTMLContent.propTypes = Content.propTypes
-
-export default Content
+MarkdownContent.propTypes = Content.propTypes

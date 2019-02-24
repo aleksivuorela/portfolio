@@ -1,13 +1,31 @@
 import React from 'react'
-import { HTMLContent } from './content'
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+import { MarkdownContent } from './content'
 
-const Experience = ({ title, content, contentComponent }) => {
-  const Content = contentComponent || HTMLContent
+const Job = ({employer, description}) => (
+  <Card className="job-card">
+    <CardHeader title={employer} />
+    <CardContent>
+      <MarkdownContent content={description} />
+    </CardContent>
+  </Card>
+);
 
+const Experience = ({ title, jobs }) => {
   return (
     <section id="experience" className="section scrollspy">
       <h2 className="section-title">{title}</h2>
-      <Content className="section-content" content={content} />
+      <div className="section-content">
+        {jobs.map((j, index) => (
+          <Job 
+            key={index}
+            employer={j.employer}
+            description={j.description}
+          />
+        ))}
+      </div>
     </section>
   );
 }

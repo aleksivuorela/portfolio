@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import About from '../../components/about'
-import Content from '../../components/content'
+import {Content} from '../../components/content'
 
 const AboutPreview = ({ entry, widgetFor }) => (
   <About
