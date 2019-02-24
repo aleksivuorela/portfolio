@@ -16,7 +16,6 @@ collections:
           - {label: "Key", name: "key", widget: "hidden", default: "intro"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - {label: "Background image", name: "bgimage", widget: "object", fields: [{label: "Image", name: "image", widget: "image"}, {label: "Alt", name: "alt", widget: "string"}]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
@@ -29,9 +28,15 @@ collections:
         name: "experience"
         fields:
           - {label: "Key", name: "key", widget: "hidden", default: "experience"}
-          - label: Jobs
-            name: jobs
-            widget: list
-            fields:
-              - {label: Employer, name: employer, widget: string}
-              - {label: Description, name: description, widget: markdown}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Jobs", name: "jobs", widget: "list", fields: [
+              {label: Employer, name: employer, widget: string},
+              {label: Position, name: position, widget: string},
+              {label: Start date, name: start-date, widget: date},
+              {label: End date, name: end-date, widget: date},
+              {label: Description, name: description, widget: markdown},
+              {label: "Logo", name: "logo", widget: "object", fields: [
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Alt", name: "alt", widget: "string"}
+                ]}
+            ]}

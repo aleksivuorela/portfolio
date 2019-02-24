@@ -7,9 +7,7 @@ const Image = ({ imageInfo, style }) => {
   const { alt = '', childImageSharp, image } = imageInfo
 
   if (!!image && !!image.childImageSharp) {
-    return (
-      <Img fluid={image.childImageSharp.fluid} alt={alt} style={style} />
-    )
+    return <Img fluid={image.childImageSharp.fluid} alt={alt} style={style} />
   }
 
   if (!!childImageSharp) {
@@ -26,7 +24,7 @@ Image.propTypes = {
   imageInfo: PropTypes.shape({
     alt: PropTypes.string,
     childImageSharp: PropTypes.object,
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   }).isRequired,
   style: PropTypes.object,
 }

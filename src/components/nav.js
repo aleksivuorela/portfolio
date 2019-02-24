@@ -78,7 +78,7 @@ const menuItems = [
   { title: 'Projects', href: '#projects', icon: <WebIcon /> },
   { title: 'Skills', href: '#skills', icon: <EqualizerIcon /> },
   { title: 'Education', href: '#education', icon: <SchoolIcon /> },
-  { title: 'Contact', href: '#contract', icon: <MailIcon /> },
+  { title: 'Contact', href: '#contract', icon: <MailIcon /> },  
   { title: 'Resume', href: '#', icon: <DescriptionIcon /> }
 ];
 
@@ -104,8 +104,8 @@ class Nav extends React.Component {
           <Divider />
         </Hidden>
         <List>
-          {menuItems.map(item => (
-            <a href={item.href}>
+          {menuItems.map((item, index) => (
+            <a href={item.href} key={index}>
               <ListItem button key={item.title}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.title} />
