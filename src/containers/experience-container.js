@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Experience from '../components/Experience'
+import Experience from '../components/experience'
 
 const ExperienceContainer = () => {
   return (
