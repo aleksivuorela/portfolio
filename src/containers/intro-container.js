@@ -7,31 +7,29 @@ const IntroContainer = () => {
     <StaticQuery
       query={graphql`
         query {
+          bgImage: file(relativePath: { eq: "bgimage.jpg" }) {
+            childImageSharp {
+              fluid(maxWidth: 1920, quality: 90) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
           markdownRemark(frontmatter: {key: {eq: "intro"}}) {
             frontmatter {
               title,
-              subtitle,
-              bgimage {
-                alt
-                image {
-                  childImageSharp {
-                    fluid(maxWidth: 1920) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-              }
+              subtitle
             }
           }
         }
       `}
       render={data => {
-        const { title, subtitle, bgimage } = data.markdownRemark.frontmatter;
+        const { title, subtitle } = data.markdownRemark.frontmatter;
+        const { bgImage } = data;
         return (
           <Intro
             title={title}
             subtitle={subtitle}
-            backgroundImage={bgimage}
+            backgroundImage={bgImage}
           />
         );
       }}
