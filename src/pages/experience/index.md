@@ -7,7 +7,6 @@ jobs:
       * Back-end development with PHP (Laravel) and Node.js 
       * Mobile development with React Native
     employer: Meiko Oy
-    enddate: ''
     logo:
       alt: meiko-logo
       image: /img/meiko-logo.png

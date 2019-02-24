@@ -33,7 +33,7 @@ collections:
               {label: Employer, name: employer, widget: string},
               {label: Position, name: position, widget: string},
               {label: Start date, name: startdate, widget: date},
-              {label: End date, name: enddate, widget: date},
+              {label: End date, name: enddate, widget: date, required: false},
               {label: Description, name: description, widget: markdown},
               {label: "Logo", name: "logo", widget: "object", fields: [
                   {label: "Image", name: "image", widget: "image"},
