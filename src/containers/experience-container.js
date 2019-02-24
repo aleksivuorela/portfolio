@@ -13,8 +13,8 @@ const ExperienceContainer = () => {
               jobs {
                 employer
                 position
-                start_date
-                end_date
+                startdate
+                enddate
                 description
                 logo {
                   alt
