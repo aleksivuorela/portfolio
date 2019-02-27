@@ -5,7 +5,7 @@ const Intro = ({ title, subtitle, backgroundImage }) => {
   return (
     <div className="intro full-height">
       <Image
-        imageInfo={{alt: 'Background image', ...backgroundImage}}
+        imageInfo={{alt: 'background', ...backgroundImage}}
         style={{
           position: "absolute",
           left: 0,

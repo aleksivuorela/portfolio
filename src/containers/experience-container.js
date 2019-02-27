@@ -20,7 +20,7 @@ const ExperienceContainer = () => {
                   alt
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 200) {
+                      fluid(maxWidth: 60) {
                         ...GatsbyImageSharpFluid
                       }
                     }
