@@ -40,3 +40,19 @@ collections:
                   {label: "Alt", name: "alt", widget: "string"}
                 ]}
             ]}
+      - file: "src/pages/skills/index.md"
+        label: "Skills"
+        name: "skills"
+        fields:
+          - {label: "Key", name: "key", widget: "hidden", default: "skills"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Areas", name: "areas", widget: "list", fields: [
+              {label: Title, name: title, widget: string},
+              {label: Techs, name: techs, widget: list, fields: [
+                {label: Title, name: title, widget: string},
+                {label: "Logo", name: "logo", widget: "object", fields: [
+                  {label: "Image", name: "image", widget: "image"},
+                  {label: "Alt", name: "alt", widget: "string"}
+                ]}
+              ]}
+            ]}
