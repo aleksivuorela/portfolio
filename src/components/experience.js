@@ -23,7 +23,7 @@ const Job = ({employer, description, logo, position, startDate, endDate}) => {
   const endDateDisplay = endDate ? dayjs(endDate).format('MMMM YYYY') : 'Present';
 
   return (
-    <Card className="job-card">
+    <Card className="card job-card">
       <CardHeader
         title={employer}
         subheader={position}

@@ -68,9 +68,17 @@ a {
     margin-top: -$app-bar-height;
 
     h1 {
-      font-size: 4.2rem;
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 1.4rem;
     }
   }
+}
+
+.card {
+  margin-bottom: 30px;
 }
 
 .section {
@@ -94,6 +102,31 @@ a {
 }
 
 #experience {
+  .job-card {
+    ul {
+      margin: 0 0 0.35em 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        line-height: 200%;
+        list-style-type: disc;
+        margin-left: 24px;
+
+        @media screen and (max-width: $screen-xs-max) {
+          line-height: 150%;
+        }
+      }
+    }
+  
+    .card-footer {
+      padding: 20px;
+      font-size: 85%;
+      color: #666;
+      background-color: rgba(0,0,0,0.02);
+    }
+  }
+
   .section-content {
     @media screen and (min-width: $screen-lg-min) {
       width: 860px;
@@ -101,17 +134,28 @@ a {
   }
 }
 
-.job-card {
-  margin-bottom: 30px;
-
-  ul {
-    margin: 0 0 0.35em 0;
+#skills {
+  .area-header {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  
+    span {
+      font-weight: 300;
+    }
   }
-
-  .card-footer {
-    padding: 20px;
-    font-size: 85%;
-    color: #666;
-    background-color: rgba(0,0,0,0.02);
+  
+  .tech {
+    text-align: center;
+  
+    img {
+      height: auto;
+      max-width: 100%;
+      max-height: 100px;
+      padding-bottom: 10px;
+    }
   }
 }

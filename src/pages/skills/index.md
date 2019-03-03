@@ -1,4 +1,5 @@
 ---
+key: skills
 title: Skills
 areas:
   - techs:
