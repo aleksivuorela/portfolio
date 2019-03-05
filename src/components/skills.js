@@ -17,9 +17,8 @@ const Area = ({title, techs}) => (
     <CardContent>
       <Grid container spacing={24}>
         {techs.map((t, index) => (
-          <Grid item xs={6} sm={4} md={2}>
+          <Grid key={index} item xs={6} sm={4} md={2}>
             <Tech
-              key={index}
               title={t.title}
               logo={t.logo}
             />

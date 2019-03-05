@@ -91,33 +91,34 @@ class Nav extends React.Component {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   };
 
+  renderDrawer = isMobile => (
+    <>
+      <Hidden xsDown implementation="css">
+        <div className={this.props.classes.nameContainer}>
+          <span className={this.props.classes.name}>Aleksi Vuorela</span>
+          <span className={this.props.classes.title}>Full Stack Developer</span>
+        </div>
+        <Divider />
+      </Hidden>
+      <List>
+        {menuItems.map((item, index) => (
+          <a href={item.href} onClick={isMobile ? this.handleDrawerToggle : null} key={index}>
+            <ListItem button key={item.title}>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.title} />
+            </ListItem>
+          </a>
+        ))}
+      </List>
+    </>
+  )
+
   render() {
     const { classes } = this.props;
 
-    const drawer = (
-      <>
-        <Hidden xsDown implementation="css">
-          <div className={classes.nameContainer}>
-            <span className={classes.name}>Aleksi Vuorela</span>
-            <span className={classes.title}>Full Stack Developer</span>
-          </div>
-          <Divider />
-        </Hidden>
-        <List>
-          {menuItems.map((item, index) => (
-            <a href={item.href} key={index}>
-              <ListItem button key={item.title}>
-                <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.title} />
-              </ListItem>
-            </a>
-          ))}
-        </List>
-      </>
-    );
-
     return (
       <>
+        {/* Mobile AppBar */}
         <Hidden smUp implementation="css">
           <AppBar position="fixed" color="inherit">
             <Toolbar className={classes.toolbar}>
@@ -137,6 +138,7 @@ class Nav extends React.Component {
           </AppBar>
         </Hidden>
         <nav>
+          {/* Mobile Drawer */}
           <Hidden smUp implementation="css">
             <Drawer
               variant="temporary"
@@ -147,9 +149,10 @@ class Nav extends React.Component {
                 paper: classes.drawerPaper,
               }}
             >
-              {drawer}
+              {this.renderDrawer(true)}
             </Drawer>
           </Hidden>
+          {/* Desktop Drawer */}
           <Hidden xsDown implementation="css">
             <Drawer
               classes={{
@@ -158,7 +161,7 @@ class Nav extends React.Component {
               variant="permanent"
               open
             >
-              {drawer}
+              {this.renderDrawer(false)}
             </Drawer>
           </Hidden>
         </nav>
