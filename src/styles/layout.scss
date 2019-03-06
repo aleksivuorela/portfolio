@@ -26,6 +26,31 @@ a {
 
 .card {
   margin-bottom: 30px;
+
+  .card-content {
+    ul {
+      margin: 0 0 0.35em 0;
+      padding: 0;
+      list-style: none;
+  
+      li {
+        line-height: 200%;
+        list-style-type: disc;
+        margin-left: 24px;
+  
+        @media screen and (max-width: $screen-xs-max) {
+          line-height: 150%;
+        }
+      }
+    }
+  }
+
+  .card-footer {
+    padding: 20px;
+    font-size: 85%;
+    color: #666;
+    background-color: rgba(0,0,0,0.02);
+  }
 }
 
 .full-height {
@@ -117,31 +142,6 @@ a {
 }
 
 #experience {
-  .job-card {
-    ul {
-      margin: 0 0 0.35em 0;
-      padding: 0;
-      list-style: none;
-
-      li {
-        line-height: 200%;
-        list-style-type: disc;
-        margin-left: 24px;
-
-        @media screen and (max-width: $screen-xs-max) {
-          line-height: 150%;
-        }
-      }
-    }
-  
-    .card-footer {
-      padding: 20px;
-      font-size: 85%;
-      color: #666;
-      background-color: rgba(0,0,0,0.02);
-    }
-  }
-
   .section-content {
     @media screen and (min-width: $screen-lg-min) {
       width: 860px;

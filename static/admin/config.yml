@@ -56,3 +56,20 @@ collections:
                 ]}
               ]}
             ]}
+      - file: "src/pages/education/index.md"
+        label: "Education"
+        name: "education"
+        fields:
+          - {label: "Key", name: "key", widget: "hidden", default: "education"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Schools", name: "schools", widget: "list", fields: [
+              {label: Name, name: name, widget: string},
+              {label: Degree, name: degree, widget: string},
+              {label: Description, name: description, widget: markdown},
+              {label: Start date, name: startdate, widget: date},
+              {label: End date, name: enddate, widget: date, required: false},
+              {label: "Logo", name: "logo", widget: "object", fields: [
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Alt", name: "alt", widget: "string"}
+              ]}
+            ]}
