@@ -174,3 +174,16 @@ a {
     }
   }
 }
+
+#contact {
+  .section-content .contact-row {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    a {
+      padding-left: 20px;
+    }
+  }
+}

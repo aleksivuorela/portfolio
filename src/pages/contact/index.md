@@ -6,7 +6,7 @@ contacts:
     icon: email
   - address: 'https://github.com/aleksivuorela'
     icon: github
-  - address: 'https://www.linkedin.com/in/aleksivuorela'
+  - address: 'https://linkedin.com/in/aleksivuorela'
     icon: linkedin
 ---
 

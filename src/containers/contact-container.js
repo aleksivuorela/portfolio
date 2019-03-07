@@ -10,6 +10,10 @@ const ContactContainer = () => {
           markdownRemark(frontmatter: {key: {eq: "contact"}}) {
             frontmatter {
               title
+              contacts {
+                address
+                icon
+              }
             }
           }
         } 
@@ -19,6 +23,7 @@ const ContactContainer = () => {
         return (
           <Contact
             title={markdownRemark.frontmatter.title}
+            contacts={markdownRemark.frontmatter.contacts}
           />
         );
       }}

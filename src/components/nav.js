@@ -78,7 +78,7 @@ const menuItems = [
   { title: 'Projects', href: '#projects', icon: <WebIcon /> },
   { title: 'Skills', href: '#skills', icon: <EqualizerIcon /> },
   { title: 'Education', href: '#education', icon: <SchoolIcon /> },
-  { title: 'Contact', href: '#contract', icon: <MailIcon /> },  
+  { title: 'Contact', href: '#contact', icon: <MailIcon /> },  
   { title: 'Resume', href: '#', icon: <DescriptionIcon /> }
 ];
 
