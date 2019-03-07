@@ -5,6 +5,7 @@ import IntroContainer from '../containers/intro-container'
 import AboutContainer from '../containers/about-container'
 import ExperienceContainer from '../containers/experience-container'
 import SkillsContainer from '../containers/skills-container'
+import EducationContainer from '../containers/education-container'
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +14,7 @@ const IndexPage = () => (
     <AboutContainer />
     <ExperienceContainer />
     <SkillsContainer />
+    <EducationContainer />
   </Layout>
 )
 

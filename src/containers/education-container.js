@@ -10,6 +10,22 @@ const EducationContainer = () => {
           markdownRemark(frontmatter: {key: {eq: "education"}}) {
             frontmatter {
               title
+              schools {
+                name
+                degree
+                startdate
+                enddate
+                logo {
+                  alt
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 60) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         } 
@@ -28,24 +44,3 @@ const EducationContainer = () => {
 }
 
 export default EducationContainer
-
-
-/*
-              schools {
-                name
-                degree
-                description
-                startdate
-                enddate
-                logo {
-                  alt
-                  image {
-                    childImageSharp {
-                      fluid(maxWidth: 60) {
-                        ...GatsbyImageSharpFluid
-                      }
-                    }
-                  }
-                }
-              }
-*/
