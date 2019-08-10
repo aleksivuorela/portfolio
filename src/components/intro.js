@@ -3,7 +3,7 @@ import Image from './image';
 
 const Intro = ({ title, subtitle, backgroundImage }) => {
   return (
-    <section id="intro" className="section scrollspy full-height">
+    <section id="intro" className="section full-height">
       <Image
         imageInfo={{alt: 'background', ...backgroundImage}}
         style={{

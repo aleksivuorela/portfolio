@@ -41,7 +41,7 @@ const Job = ({employer, description, logo, position, startDate, endDate}) => {
 
 const Experience = ({ title, jobs }) => {
   return (
-    <section id="experience" className="section scrollspy">
+    <section id="experience" className="section">
       <h2 className="section-title">{title}</h2>
       <div className="section-content">
         {jobs.map((j, index) => (

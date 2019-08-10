@@ -29,7 +29,7 @@ const School = ({name, degree, description, startDate, endDate, logo}) => {
 
 const Education = ({ title, schools }) => {
   return (
-    <section id="education" className="section scrollspy">
+    <section id="education" className="section">
       <h2 className="section-title">{title}</h2>
       <div className="section-content">
         {schools.map((s, index) => (

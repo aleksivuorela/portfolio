@@ -39,7 +39,7 @@ const ContactRow = ({ address, icon }) => {
 
 const Contact = ({ title, contacts }) => {
   return (
-    <section id="contact" className="section scrollspy full-height">
+    <section id="contact" className="section full-height">
       <h2 className="section-title">{title}</h2>
       <div className="section-content">
         {contacts.map((c, index) => (

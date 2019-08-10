@@ -30,7 +30,7 @@ const Area = ({title, techs}) => (
 )
 
 const Skills = ({ title, areas }) => (
-  <section id="skills" className="section scrollspy">
+  <section id="skills" className="section">
     <h2 className="section-title">{title}</h2>
     <div className="section-content">
       {areas.map((a, index) => (

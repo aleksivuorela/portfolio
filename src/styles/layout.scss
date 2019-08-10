@@ -12,6 +12,10 @@ body {
   font-size: 16px;
 }
 
+main {
+  background: url("../img/bg.png") repeat;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   padding: 0;
   margin: 0 0 0.35em 0;
@@ -87,6 +91,33 @@ a {
   }
 }
 
+.nav {
+  ul {
+    padding: 0;
+  }
+
+  a:not(.is-current) {
+    > div {
+      border-left: 3px solid transparent;
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  a.is-current {
+    > div {
+      border-left: 3px solid;
+      background-color: #fafafa;
+    }
+
+    span {
+      font-weight: 500;
+    }
+  }
+}
+
 #intro {
   display: flex;
   position: relative;
@@ -136,6 +167,28 @@ a {
   
       p {
         font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+#about {
+  .section-content {
+    p {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+  
+    a {
+      color: $teal;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
       }
     }
   }

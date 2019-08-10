@@ -5,7 +5,7 @@ const About = ({ title, content, contentComponent }) => {
   const Content = contentComponent || HTMLContent
 
   return (
-    <section id="about" className="section scrollspy">
+    <section id="about" className="section">
       <h2 className="section-title">{title}</h2>
       <div className="section-content">
         <Content content={content} />
