@@ -14,7 +14,7 @@ schools:
     logo:
       alt: poke-logo
       image: /img/poke-logo.png
-    name: Pohjoisen Keski-Suomen oppimiskeskus
+    name: Pohjoisen Keski-Suomen ammattiopisto
     startdate: 2010-01-08T22:00:00.000Z
 ---
 
