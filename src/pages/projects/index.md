@@ -11,7 +11,7 @@ projects:
       * Netlify hosting, deploys from GitHub
     image:
       alt: gatsby-logo
-      image: /img/gatsbyjs.svg
+      image: /img/gatsby_logo.png
     shortdesc: "My portfolio website built with Gatsby, Netlify CMS and Material-UI. \U0001F680Blazing fast of course. "
     source: 'https://github.com/aleksivuorela/portfolio'
     title: My Portfolio
